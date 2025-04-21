@@ -1,109 +1,69 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "882510de-9930-44c7-ac53-8a4d6ea70359",
-   "metadata": {},
-   "source": [
-    "# Customer Personality Analysis - Data Cleaning & Preprocessing\n",
-    "\n",
-    "##  Introduction\n",
-    "For the given Kaggle dataset on Customer Personality Analysis, I performed **data cleaning and preprocessing**.  \n",
-    "The goal of this task was to clean and prepare the raw dataset for further analysis or machine learning by handling missing values, duplicates, inconsistent formats, and standardizing data types.\n",
-    "\n",
-    "---\n",
-    "\n",
-    "##  Technical\n",
-    "- **Language:** Python  \n",
-    "- **File Type:** `.ipynb` (Jupyter Notebook)\n",
-    "\n",
-    "---\n",
-    "\n",
-    "##  Task: Data Cleaning & Preprocessing\n",
-    "\n",
-    "###  Steps Performed:\n",
-    "\n",
-    "1. **Loaded dataset** from the URL:  \n",
-    "   `https://raw.githubusercontent.com/arienugroho050396/Customer-Personality-Analysis/main/marketing_campaign.csv` using a tab separator.\n",
-    "\n",
-    "2. **Handled missing values**:  \n",
-    "   - Identified 24 missing values in the `Income` column.\n",
-    "   - Imputed these missing values using the **median** of the `Income` column.\n",
-    "\n",
-    "3. **Removed duplicates**:  \n",
-    "   - Checked and removed duplicate rows using `drop_duplicates()`.\n",
-    "\n",
-    "4. **Standardized column names**:  \n",
-    "   - Renamed all column headers to lowercase and replaced spaces with underscores for consistency.\n",
-    "\n",
-    "5. **Formatted date column**:  \n",
-    "   - Converted the `Dt_Customer` column to proper `datetime` format.\n",
-    "\n",
-    "6. **Checked and fixed data types**:  \n",
-    "   - Ensured that numerical and date columns have the correct data types (e.g., `Income` as float, `Dt_Customer` as datetime).\n",
-    "\n",
-    "7. **Standardized text columns**:  \n",
-    "   - Cleaned and standardized values in columns like `Education` and `Marital_Status` for consistency (e.g., removing extra spaces or casing issues if any).\n",
-    "\n",
-    "---\n",
-    "\n",
-    "##  Data Fields Overview\n",
-    "\n",
-    "###  People\n",
-    "\n",
-    "| Variable Name     | Description                                           |\n",
-    "|-------------------|-------------------------------------------------------|\n",
-    "| `ID`              | Customer's unique identifier                          |\n",
-    "| `Year_Birth`      | Customer's birth year                                 |\n",
-    "| `Education`       | Customer's education level                            |\n",
-    "| `Marital_Status`  | Customer's marital status                             |\n",
-    "| `Income`          | Customer's yearly household income                    |\n",
-    "| `Kidhome`         | Number of children in customer's household            |\n",
-    "| `Teenhome`        | Number of teenagers in customer's household           |\n",
-    "| `Dt_Customer`     | Date of customer's enrollment with the company        |\n",
-    "| `Recency`         | Number of days since customer's last purchase         |\n",
-    "| `Complain`        | 1 if customer complained in the last 2 years, 0 otherwise |\n",
-    "\n",
-    "\n",
-    "\n",
-    "##  Summary of Changes\n",
-    "- 24 missing income values imputed using the **median**\n",
-    "- Duplicates removed\n",
-    "- Columns renamed to be lowercase with underscores\n",
-    "- Dates converted to `datetime` format\n",
-    "- Data types verified and corrected\n",
-    "- Text values standardized\n",
-    "\n",
-    "---\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "b0807650-0e10-4397-9ebc-fa62a4349be4",
-   "metadata": {},
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.10.0"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# Customer Personality Analysis - Data Cleaning & Preprocessing
+
+##  Introduction
+For the given Kaggle dataset on Customer Personality Analysis, I performed **data cleaning and preprocessing**.  
+The goal of this task was to clean and prepare the raw dataset for further analysis or machine learning by handling missing values, duplicates, inconsistent formats, and standardizing data types.
+
+---
+
+##  Technical
+- **Language:** Python  
+- **File Type:** `.ipynb` (Jupyter Notebook)
+
+---
+
+##  Task: Data Cleaning & Preprocessing
+
+###  Steps Performed:
+
+1. **Loaded dataset** from the URL:  
+   `https://raw.githubusercontent.com/arienugroho050396/Customer-Personality-Analysis/main/marketing_campaign.csv` using a tab separator.
+
+2. **Handled missing values**:  
+   - Identified 24 missing values in the `Income` column.
+   - Imputed these missing values using the **median** of the `Income` column.
+
+3. **Removed duplicates**:  
+   - Checked and removed duplicate rows using `drop_duplicates()`.
+
+4. **Standardized column names**:  
+   - Renamed all column headers to lowercase and replaced spaces with underscores for consistency.
+
+5. **Formatted date column**:  
+   - Converted the `Dt_Customer` column to proper `datetime` format.
+
+6. **Checked and fixed data types**:  
+   - Ensured that numerical and date columns have the correct data types (e.g., `Income` as float, `Dt_Customer` as datetime).
+
+7. **Standardized text columns**:  
+   - Cleaned and standardized values in columns like `Education` and `Marital_Status` for consistency (e.g., removing extra spaces or casing issues if any).
+
+---
+
+##  Data Fields Overview
+
+###  People
+
+| Variable Name | Description |
+|---------------|-------------|
+| ID | Customer's unique identifier |
+| Year_Birth | Customer's birth year |
+| Education | Customer's education level |
+| Marital_Status | Customer's marital status |
+| Income | Customer's yearly household income |
+| Kidhome | Number of children in customer's household |
+| Teenhome | Number of teenagers in customer's household |
+| Dt_Customer | Date of customer's enrollment with the company |
+| Recency | Number of days since customer's last purchase |
+| Complain | 1 if customer complained in the last 2 years, 0 otherwise |
+
+
+
+##  Summary of Changes
+- 24 missing income values imputed using the **median**
+- Duplicates removed
+- Columns renamed to be lowercase with underscores
+- Dates converted to `datetime` format
+- Data types verified and corrected
+- Text values standardized
+
